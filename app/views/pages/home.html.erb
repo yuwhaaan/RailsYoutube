@@ -1,0 +1,23 @@
+
+<div class="centered-block">
+    <h1>Rails to YouTube Upload</h1>
+    <% if current_user %>
+        <h2>Account: <%= current_user.email %></h2>
+        <%= link_to "Upload a Youtube Video", videos_new_path %>
+        <%= button_to "Logout", destroy_user_session_path, data: {turbo: false}, method: :delete %>
+
+    <% else %>
+      <img src="/assets/RailsYT_Logo.png" alt="Description of the image">
+      <div class="field">
+      <div>
+
+    <% end %>
+</div>
+
+<style>
+  .centered-block {
+    width: 50%; /* Adjust the width as needed */
+    margin: 0 auto; /* This centers the element horizontally */
+    text-align: center; /* Centers the text inside the block */
+  }
+</style>

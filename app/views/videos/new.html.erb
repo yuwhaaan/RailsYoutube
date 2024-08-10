@@ -1,0 +1,28 @@
+<div class="container" style="margin-left: 10px;">
+  <h1>Upload a Video</h1>
+
+  <br>
+  <%= form_with url: videos_path, local: true, multipart: true do |f| %>
+    <div class="field", >
+      <%= f.label :title, style: "display: block" %>
+      <%= f.text_field :title %>
+    </div>
+
+    <br>
+    <div class="field">
+      <%= f.label :description, style: "display: block" %>
+      <%= f.text_area :description %>
+    </div>
+
+    <br>
+    <div class="field">
+      <%= f.label :video_file, style: "display: block" %>
+      <%= f.file_field :video_file %>
+    </div>
+
+    <br>
+    <div class="actions">
+      <%= f.submit "Upload Video" %>
+    </div>
+  <% end %>
+</div>
